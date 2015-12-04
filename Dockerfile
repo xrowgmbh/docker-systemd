@@ -16,6 +16,9 @@ rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
 rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
+RUN yum -y install epel-release
+RUN yum -y install patch git subversion python-pip redis ansible
+RUN pip install redis
 
 VOLUME [ "/sys/fs/cgroup" ]
 
