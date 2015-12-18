@@ -4,7 +4,7 @@ FROM centos:7
 
 MAINTAINER "Björn Dieding" <bjoern@xrow.de>
 
-ENV container docker
+ENV container=docker
 
 RUN yum -y swap -- remove systemd-container systemd-container-libs -- install systemd systemd-libs
 RUN yum -y update; yum clean all
