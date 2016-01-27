@@ -1,0 +1,9 @@
+[Unit]
+Description=Kubernetes env to hosts vars
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/env2host.php
+
+[Install]
+WantedBy=multi-user.target
