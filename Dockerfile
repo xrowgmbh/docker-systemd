@@ -20,7 +20,7 @@ RUN yum -y install epel-release
 RUN yum -y install patch git subversion python-pip redis ansible
 RUN pip install redis
 
-RUN /bin/sh -c "yum -y install php"
+RUN yum -y install php
 ADD env2host.service /etc/systemd/system/env2host.service
 RUN chmod 755 /etc/systemd/system/env2host.service
 ADD env2host.php /usr/local/bin/env2host.php
