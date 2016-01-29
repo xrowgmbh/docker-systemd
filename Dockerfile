@@ -5,7 +5,7 @@ FROM centos:7
 MAINTAINER "Björn Dieding" <bjoern@xrow.de>
 
 ENV container=docker
-
+#testing
 RUN yum -y install php
 RUN yum -y swap -- remove systemd-container systemd-container-libs -- install systemd systemd-libs
 RUN yum -y update; yum clean all
